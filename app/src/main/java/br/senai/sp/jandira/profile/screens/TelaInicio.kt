@@ -24,8 +24,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -237,17 +239,19 @@ fun TelaInicio() {
                                     )
                                 }
                             }
-
                         }
                     }
-
                 }
             }
-            Row (
+            Column(
+                modifier = Modifier
+                    .fillMaxSize(),
+                verticalArrangement = Arrangement.Top
+            ) {
+                Row (
                 modifier = Modifier
                     .padding(horizontal = 20.dp)
-                    .padding(15.dp)
-                    .fillMaxSize(),
+                    .padding(15.dp),
                 horizontalArrangement = Arrangement.Absolute.Left
             ){
                 Icon(
@@ -265,9 +269,91 @@ fun TelaInicio() {
                         .padding(4.dp)
                 )
             }
-            Colum
-            ){  }
+                Column (
+                    modifier = Modifier
+                        .padding(horizontal = 30.dp)
+                        .padding(top = 10.dp)
+                        .padding(bottom = 15.dp)
+                ){
+                    Text(
+                        text = stringResource(R.string.official),
+                        fontSize = 15.sp,
+                        color = Color(0xFFB596F1)
+                    )
+                    Text(
+                        text = stringResource(R.string.emailFic),
+                        fontSize = 15.sp,
+                        color = Color(0xFF6C5E86),
+                        modifier = Modifier
+                            .padding(top = 4.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.personal),
+                        fontSize = 15.sp,
+                        color = Color(0xFFB596F1),
+                        modifier = Modifier
+                            .padding(top =  15.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.personalFic),
+                        fontSize = 15.sp,
+                        color = Color(0xFF6C5E86),
+                        modifier = Modifier
+                            .padding(top = 4.dp)
+                    )
+                    HorizontalDivider(
+                        modifier = Modifier
+                            .padding(
+                                top = 15.dp,
+                                start = 2.dp,
+                                end = 20.dp
+                            ),
+                        color =
+                        Color(color = 0xFFEAEBF1)
+                    )
+                    Row (
+                        modifier = Modifier
 
+                                .padding(10.dp),
+                        horizontalArrangement = Arrangement.Absolute.Left
+                        ){
+                        Icon(
+                                imageVector = Icons.Default.Call,
+                                contentDescription = "",
+                                tint = Color(0xFFD4C7EF),
+                                modifier = Modifier
+                                    .size(22.dp)
+                            )
+                        Text(
+                                text = stringResource(R.string.phone),
+                                fontSize = 15.sp,
+                                color = Color(0xFFEAEBF1),
+                                modifier = Modifier
+                                    .padding(4.dp)
+                            )
+                        }
+                    Column (
+                        modifier = Modifier
+                            .padding(horizontal = 30.dp)
+                            .padding(top = 10.dp)
+                            .padding(bottom = 15.dp)
+                    ) {
+                        Text(
+                            text = stringResource(R.string.mobile),
+                            fontSize = 15.sp,
+                            color = Color(0xFFB596F1)
+                        )
+                        Text(
+                            text = stringResource(R.string.number),
+                            fontSize = 15.sp,
+                            color = Color(0xFF6C5E86),
+                            modifier = Modifier
+                                .padding(top = 4.dp)
+                        )
+
+                    }
+                }
+            }
         }
     }
 }
