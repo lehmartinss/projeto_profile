@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Profile</string>
+    <string name= "logo_description">Logo description</string>
+    <string name= "details">Details</string>
+    <string name= "name">Jenny Wilson</string>
+    <string name= "sr">Sr.UI/UX Designer</string>
+    <string name= "email">Email</string>
+    <string name= "call">Call</string>
+    <string name= "whatsapp">Whatsapp</string>
+    <string name= "official">Official</string>
+    <string name= "personal">Personal</string>
+    <string name= "emailFic">michael.mitc@example.com</string>
+    <string name= "personalFic">michael@example.com</string>
+
+</resources>
